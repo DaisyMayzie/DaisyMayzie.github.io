@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <script>
-    fetch('/head.html')
+    fetch('head.html')
       .then(res => res.text())
       .then(html => document.head.insertAdjacentHTML('beforeend', html));
   </script>
@@ -39,9 +39,9 @@
             const html = await res.text();
             document.getElementById(id).innerHTML = html;
         }
-        loadComponent('/header', 'header.html');
-        loadComponent('/nav', 'nav.html');
-        loadComponent('/footer', 'footer.html');
+        loadComponent('header', 'header.html');
+        loadComponent('nav', 'nav.html');
+        loadComponent('footer', 'footer.html');
     </script>
 
 </body>
