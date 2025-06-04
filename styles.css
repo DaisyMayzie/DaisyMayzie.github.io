@@ -1,113 +1,206 @@
-
+/* ====================
+   COLOR VARIABLES
+==================== */
 :root {
-    --white: #E6E7E3;
-    --green: #81A581;
-    --dkgreen: #566F56;
-    --black: #2E3D2E;
+  --white: #E6E7E3;
+  --green: #81A581;
+  --dkgreen: #566F56;
+  --black: #2E3D2E;
 }
+
+/* ====================
+   BASE STYLES
+==================== */
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-    color: var(--black);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+  color: var(--black);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
+
+/* ====================
+   LAYOUT
+==================== */
 main {
-    flex: 1;
+  flex: 1;
+  display: flex;
+  padding: 1rem;
 }
-header {
-    background-color: var(--dkgreen);
-    color: var(--white);
-    text-align: center;
-}
-header img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-nav {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 0.5rem;
-    text-align: center;
-}
-nav a {
-    color: var(--white);
-    margin: 0 15px;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-nav a:hover {
-    background-color: var(--dkgreen);
-}
-main {
-    display: flex;
-    padding: 1rem;
-}
+
 article {
-    flex: 3;
-    padding: 1rem;
+  flex: 3;
+  padding: 1rem;
 }
+
 aside {
-    flex: 1;
-    padding: 1rem;
-    background-color: var(--green);
-    color: var(--white);
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--green);
+  color: var(--white);
 }
+
+/* ====================
+   HEADER
+==================== */
+header {
+  background-color: var(--dkgreen);
+  color: var(--white);
+  text-align: center;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====================
+   NAVIGATION
+==================== */
+nav {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+nav a {
+  color: var(--white);
+  margin: 0 15px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--dkgreen);
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown trigger ('More') */
+.dropbtn {
+  color: var(--white);
+  background-color: transparent;
+  margin: 0 15px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: default; /* Not clickable */
+}
+
+.dropbtn:hover {
+  background-color: transparent; /* No highlight on hover */
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--black);
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 0.4rem;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:last-child {
+  margin-bottom: 0.4rem;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--dkgreen);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ====================
+   FOOTER
+==================== */
 footer {
-    background-color: var(--dkgreen);
-    color: var(--white);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
+  background-color: var(--dkgreen);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
 }
+
+/* ====================
+   SOCIAL LINKS
+==================== */
 .social-links ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
+
 .social-links li {
-    position: relative;
-    padding-left: 1.5em;
-    margin-bottom: 0.5em;
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
 }
+
 .social-links li::before {
-    content: "❀";
-    color: var(--white);
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1em;
-    line-height: 1;
+  content: "❀";
+  color: var(--white);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1em;
+  line-height: 1;
 }
+
 .social-links a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: var(--dkgreen);
+  color: var(--dkgreen);
 }
+
+/* ====================
+   NAV BUTTONS (e.g. Go Home)
+==================== */
 .nav-button {
-    background-color: var(--dkgreen);
-    color: var(--white);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s;
+  background-color: var(--dkgreen);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .nav-button:hover {
-    background-color: var(--black);
+  background-color: var(--black);
 }
